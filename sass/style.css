@@ -10,7 +10,8 @@ body {
 .container {
   min-width: 320px;
   max-width: 1150px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 15px; }
 
 .header {
   background: #EEEFF1; }
@@ -82,5 +83,50 @@ body {
         @media (min-width: 1024px) {
           .header .header-block .menu a {
             padding: 2%; } }
+
+.promo {
+  padding: 150px 0; }
+  .promo .promo-block {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 50px; }
+    @media (min-width: 1024px) {
+      .promo .promo-block {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 100px; } }
+    .promo .promo-block .item {
+      justify-self: center;
+      align-self: center; }
+      .promo .promo-block .item h1 {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 79px;
+        letter-spacing: 0.05em;
+        margin: 0;
+        padding: 0; }
+        @media (min-width: 768px) {
+          .promo .promo-block .item h1 {
+            font-size: 72px; } }
+      .promo .promo-block .item p {
+        color: #727272;
+        width: 320px;
+        padding-top: 40px; }
+        @media (min-width: 768px) {
+          .promo .promo-block .item p {
+            width: 540px; } }
+      .promo .promo-block .item .promo-block-btn {
+        width: 160px;
+        height: 50px;
+        background: #34547A;
+        border: 1px solid #ffffff;
+        box-sizing: border-box;
+        border-radius: 6px;
+        padding: 2%;
+        margin-top: 40px; }
+        .promo .promo-block .item .promo-block-btn a {
+          color: #ffffff;
+          display: block;
+          text-transform: uppercase;
+          text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */

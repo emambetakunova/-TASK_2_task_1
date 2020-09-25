@@ -13,6 +13,7 @@ body
   min-width: 320px
   max-width: 1150px
   margin: 0 auto
+  padding: 0 15px
 
 .header
   background: $backgroundDefault
@@ -77,3 +78,45 @@ body
             color: $background
         +desktop
           padding: 2%
+
+.promo
+  padding: 150px 0
+  .promo-block
+    display: grid
+    grid-template-columns: 1fr
+    grid-row-gap: 50px
+    +desktop
+      grid-template-columns: 1fr 1fr
+      grid-column-gap: 100px
+    .item
+      justify-self: center
+      align-self: center
+      h1
+        font-weight: 500
+        font-size: 48px
+        line-height: 79px
+        letter-spacing: 0.05em
+        margin: 0
+        padding: 0
+        +tablet
+          font-size: 72px
+      p
+        color: $colorDefault
+        width: 320px
+        padding-top: 40px
+        +tablet
+          width: 540px
+      .promo-block-btn
+        width: 160px
+        height: 50px
+        background: $background
+        border: 1px solid $colorWhite
+        box-sizing: border-box
+        border-radius: 6px
+        padding: 2%
+        margin-top: 40px
+        a
+          color: $colorWhite
+          display: block
+          text-transform: uppercase
+          text-decoration: none
