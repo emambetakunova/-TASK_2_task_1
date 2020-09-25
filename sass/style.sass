@@ -1,0 +1,79 @@
+@import mixin
+
+body
+  font-family: $font
+  color: $colorBlack
+  background: $backgroundDefault
+  font-size: $fontSize
+  line-height: 1.8
+  margin: 0
+  min-width: 320px
+
+.container
+  min-width: 320px
+  max-width: 1150px
+  margin: 0 auto
+
+.header
+  background: $backgroundDefault
+  +tablet
+    padding-top: 60px
+  .header-block
+    position: relative
+    color: $colorWhite
+    display: grid
+    grid-template-columns: 1fr 40px
+    align-items: center
+    padding: 2%
+    +tablet
+      grid-template-columns: 96px 1fr
+      grid-column-gap: 20px
+      padding: 0 10px
+      text-align: end
+    +desktop
+      height: 80px
+    .menu-toggle
+      display: flex
+      align-items: center
+      justify-self: flex-end
+      background: $background
+      padding: 3% 5%
+      color: $colorWhite
+      width: 40px
+      height: 40px
+      order: 3
+      img
+        width: 30px
+        height: 30px
+        padding: 10%
+      +tablet
+        display: none
+      &:hover + .menu
+        display: block
+    .menu
+      background: $background
+      position: absolute
+      top: 100%
+      right: 0
+      width: 100%
+      max-width: 425px
+      display: none
+      +tablet
+        background: none
+        position: static
+        display: block
+        max-width: 100%
+      a
+        color: $colorBlack
+        display: block
+        text-transform: uppercase
+        text-decoration: none
+        padding: 2% 10%
+        +tablet
+          display: inline-block
+          padding: 1%
+          background: none
+          &:hover
+            color: $background
+        +desktop
+          padding: 2%
