@@ -5,6 +5,7 @@ $colorBlack: #000000
 $colorWhite: #ffffff
 $colorDefault: #727272
 $backgroundDefault: #EEEFF1
+$backgroundDefault2: #E5E5E5
 $background: #34547A
 $fontSize: 16px
 
@@ -16,3 +17,19 @@ $fontSize: 16px
 =desktop
   @media #{$desktop-up}
     @content
+
+%sub-title
+  font-style: normal
+  font-weight: 500
+  font-size: 32px
+  line-height: 37px
+  text-align: center
+  color: $colorBlack
+
+%text
+  color: $colorDefault
+  font-size: 16px
+  line-height: 26px
+  max-width: 320px
+  +tablet
+    max-width: 540px

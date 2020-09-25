@@ -80,7 +80,7 @@ body
           padding: 2%
 
 .promo
-  padding: 150px 0
+  padding: 60px 0
   .promo-block
     display: grid
     grid-template-columns: 1fr
@@ -100,12 +100,9 @@ body
         padding: 0
         +tablet
           font-size: 72px
-      p
-        color: $colorDefault
-        width: 320px
+      .text
+        @extend %text
         padding-top: 40px
-        +tablet
-          width: 540px
       .promo-block-btn
         width: 160px
         height: 50px
@@ -120,3 +117,42 @@ body
           display: block
           text-transform: uppercase
           text-decoration: none
+
+.about
+  background: $backgroundDefault2
+  padding: 60px 0
+  display: flex
+  justify-content: center
+  .about-block
+    .sub-title
+      @extend %sub-title
+    .text
+      @extend %text
+
+.info
+  background: $background
+  padding: 60px 0
+  .info-block
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-row-gap: 20px
+    grid-column-gap: 20px
+    +desktop
+      grid-template-columns: repeat(6, 1fr)
+      grid-column-gap: 0
+    .item
+      justify-self: center
+      align-self: center
+      .inner-item
+        display: grid
+        grid-template-columns: 50px 1fr
+        grid-column-gap: 20px
+        justify-self: center
+        align-self: center
+        img
+          justify-self: center
+          align-self: center
+        span
+          display: block
+          color: $colorWhite
+          max-width: 80px
