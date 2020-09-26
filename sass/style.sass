@@ -145,6 +145,29 @@ body
           display: block
           color: $colorWhite
           max-width: 80px
+.skills
+  background: $backgroundDefault2
+  padding: 60px 0
+  .skills-block
+    display: grid
+    grid-template-columns: 1fr
+    grid-row-gap: 50px
+    +desktop
+      grid-template-columns: 1fr 555px
+      grid-column-gap: 80px
+    .item
+      .sub-title
+        @extend %sub-title
+        text-align: start
+      img
+        display: block
+        width: 100%
+        height: auto
+      .text
+        @extend %text
+        display: block
+        border-bottom: 2px solid $background
+        padding: 2%
 .video
   padding: 60px 0
   .video-block
@@ -242,8 +265,6 @@ body
       .btn
         @extend %btn
         margin: 30px auto 0
-
-
 
 .footer
   background: $background

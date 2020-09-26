@@ -1,4 +1,4 @@
-.about .about-block .sub-title, .video .video-block .sub-title, .form .form-block .sub-title {
+.about .about-block .sub-title, .skills .skills-block .item .sub-title, .video .video-block .sub-title, .form .form-block .sub-title {
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -7,14 +7,14 @@
   color: #000000;
 }
 
-.promo .promo-block .item .text, .about .about-block .text, .video .video-block .text, .form .form-block .text {
+.promo .promo-block .item .text, .about .about-block .text, .skills .skills-block .item .text, .video .video-block .text, .form .form-block .text {
   color: #727272;
   font-size: 16px;
   line-height: 26px;
   max-width: 320px;
 }
 @media (min-width: 768px) {
-  .promo .promo-block .item .text, .about .about-block .text, .video .video-block .text, .form .form-block .text {
+  .promo .promo-block .item .text, .about .about-block .text, .skills .skills-block .item .text, .video .video-block .text, .form .form-block .text {
     max-width: 540px;
   }
 }
@@ -226,6 +226,35 @@ body {
   display: block;
   color: #ffffff;
   max-width: 80px;
+}
+
+.skills {
+  background: #E5E5E5;
+  padding: 60px 0;
+}
+.skills .skills-block {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 50px;
+}
+@media (min-width: 1024px) {
+  .skills .skills-block {
+    grid-template-columns: 1fr 555px;
+    grid-column-gap: 80px;
+  }
+}
+.skills .skills-block .item .sub-title {
+  text-align: start;
+}
+.skills .skills-block .item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.skills .skills-block .item .text {
+  display: block;
+  border-bottom: 2px solid #34547A;
+  padding: 2%;
 }
 
 .video {
