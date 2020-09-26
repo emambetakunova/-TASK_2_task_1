@@ -156,7 +156,35 @@ body
           display: block
           color: $colorWhite
           max-width: 80px
-
+.video
+  padding: 60px 0
+  .video-block
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    flex-flow: column
+    .sub-title
+      @extend %sub-title
+    .text
+      @extend %text
+      text-align: center
+      margin: 0 auto
+  .video-image
+    position: relative
+    margin-top: 20px
+    img
+      display: block
+      width: 100%
+      height: auto
+    &::before
+      content: ""
+      position: absolute
+      top: 40%
+      left: 46%
+      background-image: url("../images/play-button.svg")
+      z-index: 10
+      width: 100px
+      height: 100px
 .gallery
   margin-top: 20px
   display: grid

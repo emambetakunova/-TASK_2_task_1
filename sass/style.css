@@ -1,4 +1,4 @@
-.about .about-block .sub-title {
+.about .about-block .sub-title, .video .video-block .sub-title {
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -6,13 +6,13 @@
   text-align: center;
   color: #000000; }
 
-.promo .promo-block .item .text, .about .about-block .text {
+.promo .promo-block .item .text, .about .about-block .text, .video .video-block .text {
   color: #727272;
   font-size: 16px;
   line-height: 26px;
   max-width: 320px; }
   @media (min-width: 768px) {
-    .promo .promo-block .item .text, .about .about-block .text {
+    .promo .promo-block .item .text, .about .about-block .text, .video .video-block .text {
       max-width: 540px; } }
 
 body {
@@ -175,6 +175,33 @@ body {
           display: block;
           color: #ffffff;
           max-width: 80px; }
+
+.video {
+  padding: 60px 0; }
+  .video .video-block {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-flow: column; }
+    .video .video-block .text {
+      text-align: center;
+      margin: 0 auto; }
+  .video .video-image {
+    position: relative;
+    margin-top: 20px; }
+    .video .video-image img {
+      display: block;
+      width: 100%;
+      height: auto; }
+    .video .video-image::before {
+      content: "";
+      position: absolute;
+      top: 40%;
+      left: 46%;
+      background-image: url("../images/play-button.svg");
+      z-index: 10;
+      width: 100px;
+      height: 100px; }
 
 .gallery {
   margin-top: 20px;
