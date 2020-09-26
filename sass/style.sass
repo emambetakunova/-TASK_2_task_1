@@ -103,20 +103,9 @@ body
       .text
         @extend %text
         padding-top: 40px
-      .promo-block-btn
-        width: 160px
-        height: 50px
-        background: $background
-        border: 1px solid $colorWhite
-        box-sizing: border-box
-        border-radius: 6px
-        padding: 2%
-        margin-top: 40px
-        a
-          color: $colorWhite
-          display: block
-          text-transform: uppercase
-          text-decoration: none
+      .btn
+        @extend %btn
+
 
 .about
   background: $backgroundDefault2
@@ -199,6 +188,7 @@ body
     grid-template-columns: repeat(4, 1fr)
 
 .partners
+  background: $backgroundDefault2
   padding: 60px 0
   .partners-block
     display: grid
@@ -211,6 +201,50 @@ body
       height: auto
     +desktop
       grid-template-columns: repeat(4, 1fr)
+
+.form
+  padding: 60px 0
+  .form-block
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    flex-flow: column
+    .sub-title
+      @extend %sub-title
+    .text
+      @extend %text
+      text-align: center
+      margin: 0 auto
+    .form-wrapper
+      display: flex
+      flex-flow: column
+      margin-top: 30px
+      +desktop
+        max-width: 540px
+        margin: 30px auto 0
+      textarea
+        background: $colorWhite
+        border: none
+        color: #5F5D5D
+        padding: 20px 30px
+      .input-wrapper
+        display: grid
+        grid-template-columns: 1fr
+        grid-row-gap: 20px
+        +desktop
+          grid-template-columns: 1fr 1fr
+          grid-column-gap: 20px
+        input
+          background: $colorWhite
+          border: none
+          padding: 20px 30px
+          margin-bottom: 20px
+      .btn
+        @extend %btn
+        margin: 30px auto 0
+
+
+
 .footer
   background: $background
   padding: 30px 0

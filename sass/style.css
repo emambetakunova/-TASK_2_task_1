@@ -1,4 +1,4 @@
-.about .about-block .sub-title, .video .video-block .sub-title {
+.about .about-block .sub-title, .video .video-block .sub-title, .form .form-block .sub-title {
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -6,14 +6,32 @@
   text-align: center;
   color: #000000; }
 
-.promo .promo-block .item .text, .about .about-block .text, .video .video-block .text {
+.promo .promo-block .item .text, .about .about-block .text, .video .video-block .text, .form .form-block .text {
   color: #727272;
   font-size: 16px;
   line-height: 26px;
   max-width: 320px; }
   @media (min-width: 768px) {
-    .promo .promo-block .item .text, .about .about-block .text, .video .video-block .text {
+    .promo .promo-block .item .text, .about .about-block .text, .video .video-block .text, .form .form-block .text {
       max-width: 540px; } }
+
+.promo .promo-block .item .btn, .form .form-block .form-wrapper .btn {
+  width: 300px;
+  height: 70px;
+  background: #34547A;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 2%;
+  margin-top: 40px; }
+  .promo .promo-block .item .btn a, .form .form-block .form-wrapper .btn a {
+    color: #ffffff;
+    display: block;
+    font-size: 14px;
+    line-height: 23px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none; }
 
 body {
   font-family: "Roboto", sans-serif;
@@ -126,20 +144,6 @@ body {
             font-size: 72px; } }
       .promo .promo-block .item .text {
         padding-top: 40px; }
-      .promo .promo-block .item .promo-block-btn {
-        width: 160px;
-        height: 50px;
-        background: #34547A;
-        border: 1px solid #ffffff;
-        box-sizing: border-box;
-        border-radius: 6px;
-        padding: 2%;
-        margin-top: 40px; }
-        .promo .promo-block .item .promo-block-btn a {
-          color: #ffffff;
-          display: block;
-          text-transform: uppercase;
-          text-decoration: none; }
 
 .about {
   background: #E5E5E5;
@@ -218,6 +222,7 @@ body {
       grid-template-columns: repeat(4, 1fr); } }
 
 .partners {
+  background: #E5E5E5;
   padding: 60px 0; }
   .partners .partners-block {
     display: grid;
@@ -231,6 +236,45 @@ body {
     @media (min-width: 1024px) {
       .partners .partners-block {
         grid-template-columns: repeat(4, 1fr); } }
+
+.form {
+  padding: 60px 0; }
+  .form .form-block {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-flow: column; }
+    .form .form-block .text {
+      text-align: center;
+      margin: 0 auto; }
+    .form .form-block .form-wrapper {
+      display: flex;
+      flex-flow: column;
+      margin-top: 30px; }
+      @media (min-width: 1024px) {
+        .form .form-block .form-wrapper {
+          max-width: 540px;
+          margin: 30px auto 0; } }
+      .form .form-block .form-wrapper textarea {
+        background: #ffffff;
+        border: none;
+        color: #5F5D5D;
+        padding: 20px 30px; }
+      .form .form-block .form-wrapper .input-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px; }
+        @media (min-width: 1024px) {
+          .form .form-block .form-wrapper .input-wrapper {
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 20px; } }
+        .form .form-block .form-wrapper .input-wrapper input {
+          background: #ffffff;
+          border: none;
+          padding: 20px 30px;
+          margin-bottom: 20px; }
+      .form .form-block .form-wrapper .btn {
+        margin: 30px auto 0; }
 
 .footer {
   background: #34547A;
